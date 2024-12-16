@@ -1,41 +1,42 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="shortcut icon" href="img/softoweb.png">
-   <!-- GOOGLE FONTS CDN LINK -->
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <!-- CSS LINK -->
-   <link rel="stylesheet" href="css/bootstrap.css">
-   <!-- AOS ANIAMATION PLUGIN -->
-   <link rel="stylesheet" href="css/animate.css">
-   <!-- OWL CAROUSEL PLUGIN -->
-   <link rel="stylesheet" href="css/owl.carousel.min.css">
-   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-   <!-- MAGNIFIC POPUP PLUGIN -->
-   <link rel="stylesheet" href="css/magnific-popup.css">
-   <link rel="stylesheet" href="css/custom.css">
-   <title>SoftoWeb</title>
-</head>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="shortcut icon" href="{% static 'img/softoweb.png' %}">
+      <!-- GOOGLE FONTS CDN LINK -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <!-- CSS LINK -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+      <!-- AOS ANIMATION PLUGIN -->
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+      <!-- OWL CAROUSEL PLUGIN -->
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+      <!-- MAGNIFIC POPUP PLUGIN -->
+      <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+      <title>TechnoZone Ltd.</title>
+   </head>
 <body>
-
+   {% block content %}
 
 
    <!-- ======================================== NAVIGRATION ======================================== -->
    <nav id="navigration" class="navbar fixed-top p-0">
       <div class="container">
          <!-- <a class="logo" href="#"><img src="img/logo.png" alt=""></a> -->
-         <a class="logo" href="#">SoftoWeb</a>
+         <a class="logo" href="{% url 'home' %}">TechnoZone</a>
          <div class="sidenav">
             <div class="header">
-               <a class="logo d-lg-none" href="#">SoftoWeb</a>
-               <a href="#" class="d-lg-none" id="showsidenav"><img src="img/icon/letter-x.png" alt=""> </a>
+               <a class="logo d-lg-none" href="{% url 'home' %}">TechnoZone</a>
+               <a href="#" class="d-lg-none" id="showsidenav"><img src="{% static 'img/icon/letter-x.png' %}" alt="Letter X">               </a>
             </div>
             <ul class="mb-0">
-               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                <li class="nav-item dropdown">
                   <a class="nav-link" data-toggle="collapse" href="#menu1">Pages <i class="fal fa-angle-down"></i></a>
                   <div id="menu1" class="dropdown-menus collapse">
@@ -51,8 +52,8 @@
                <li class="nav-item dropdown">
                   <a class="nav-link" data-toggle="collapse" href="#menu2">Services <i class="fal fa-angle-down"></i></a>
                   <div id="menu2" class="dropdown-menus collapse">
-                     <a class="dropdown-item" href="#"><span>Services</span></a>
-                     <a class="dropdown-item" href="#"><span>Services Details</span></a>
+                     <a class="dropdown-item" href="{% url 'services' %}"><span>Services</span></a>
+                     <a class="dropdown-item" href="{% url 'services' %}"><span>Services Details</span></a>
                   </div>
                </li>
                <li class="nav-item dropdown">
@@ -69,12 +70,12 @@
                      </div>
                   </div>
                </li>
-               <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+               <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
             </ul>
          </div>
          <button class="btn font-btn get-quote d-none d-md-block"><i class="fal fa-chevron-right"></i> <span>Get A Quote</span></button>
          <div id="hamburger" class="d-lg-none">
-            <img src="img/icon/menu.png" class="img01" alt="">
+            <img src="{% static 'img/icon/menu.png' %}" class="img01" alt="Menu">
          </div>
       </div>
    </nav>
@@ -119,7 +120,7 @@
                      </div>
                      <div class="txt">
                         <p>VISIT US</p>
-                        <span>66 Broklyn Street, New York. USA</span>
+                        <span>Nikunja-1, Dhaka. Bangladesh</span>
                      </div>
                   </div>
                   <div class="icon-box wow fadeInLeftBig" data-wow-duration="1.5s">
@@ -128,7 +129,7 @@
                      </div>
                      <div class="txt">
                         <p>EMAIL ADDRESS</p>
-                        <span>softoweb1@gmail.com</span>
+                        <span>technozone@gmail.com</span>
                      </div>
                   </div>
                   <div class="icon-box mb-0 wow fadeInLeftBig" data-wow-duration="1.5s">
@@ -137,7 +138,7 @@
                      </div>
                      <div class="txt">
                         <p>CALL NOW</p>
-                        <span>01934565397</span>
+                        <span>+880 1568-251557</span>
                      </div>
                   </div>
                </div>
@@ -188,7 +189,7 @@
          <div class="row">
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                <div class="footer-box">
-                  <a href="#" class="logo">SOFTOWEB</a>
+                  <a href="#" class="logo">TECHNOZONE</a>
                   <p class="about">Welcome to our web design agency. Lorem ipsum simply free text dolor sited amet cons cing elit.</p>
                   <div class="social-links">
                      <a href="#"><i class="fab fa-facebook"></i></a>
@@ -218,7 +219,7 @@
                         <i class="fal fa-map-marker-alt"></i>
                      </div>
                      <div class="txt">
-                        <span>66 Broklyn Street, New York. USA</span>
+                        <span>Nikunja-1, Dhaka. Bangladesh</span>
                      </div>
                   </div>
                   <div class="icon-box">
@@ -226,7 +227,7 @@
                         <i class="fal fa-envelope"></i>
                      </div>
                      <div class="txt">
-                        <span>softoweb1@gmail.com</span>
+                        <span>technozone@gmail.com</span>
                      </div>
                   </div>
                   <div class="icon-box mb-0">
@@ -234,7 +235,7 @@
                         <i class="fal fa-phone-alt"></i>
                      </div>
                      <div class="txt">
-                        <span>01934565397</span>
+                        <span>+880 1568-251557</span>
                      </div>
                   </div>
                </div>
@@ -255,7 +256,7 @@
          <div class="copy-right">
             <div class="row">
                <div class="col">
-                  <span>Copyright © 2021 SoftoWeb. All rights reserved.</span>
+                  <span>Copyright © 2024 TechnoZone. All rights reserved.</span>
                </div>
             </div>
          </div>
@@ -269,22 +270,22 @@
    </a>
 
 
-   <script src="js/jquery.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/font-awesome-pro.js"></script>
-   <!-- SCROLL ANIAMATION Plugin -->
-   <script src="js/wow.min.js"></script>
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <script src="{% static 'js/font-awesome-pro.js' %}"></script>
+   <!-- SCROLL ANIMATION Plugin -->
+   <script src="{% static 'js/wow.min.js' %}"></script>
    <!-- MIXIT UP Plugin -->
-   <script src="js/mixitup.min.js"></script>
+   <script src="{% static 'js/mixitup.min.js' %}"></script>
    <!-- MAGNIFIC POPUP Plugin -->
-   <script src="js/jquery.magnific-popup.min.js"></script>
+   <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
    <!-- CounterUp Plugin -->
-   <script src="js/jquery.counterup.min.js"></script>
-   <script src="js/jquery.waypoints.min.js"></script>
+   <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+   <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
    <!-- OWL CAROUSEL Plugin -->
-   <script src="js/owl.carousel.min.js"></script>
-   <script src="js/custom.js"></script>
+   <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+   <script src="{% static 'js/custom.js' %}"></script>
    <script>
 
 
@@ -293,5 +294,6 @@
 
 
    </script>
+   {% endblock %}
 </body>
 </html>
